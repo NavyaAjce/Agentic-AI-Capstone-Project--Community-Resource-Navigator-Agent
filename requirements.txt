@@ -1,0 +1,68 @@
+googlemaps==4.10.0
+
+
+
+3. **Run the demo notebook**
+- Open `notebooks/demo.ipynb` in Jupyter, Kaggle, or Colab.
+- Execute cells sequentially to see the dummy resource discovery and session memory in action.
+
+---
+
+## Code Explanation
+
+### agent_memory.py
+
+- Uses `sqlite3` to create and manage an in-memory SQLite database.
+- Contains tables for storing resource information and user session records.
+- Provides functions to save and retrieve session data.
+
+### resource_finder.py
+
+- Implements resource discovery functions that query the dummy database.
+- Supports filtering resources by type, e.g., hospitals or shelters.
+
+### main_agent.py
+
+- Contains the main handler function `handle_user_request()` that:
+- Analyzes user request urgency.
+- Calls resource finder to get nearby resources.
+- Persists session history.
+- Prepares responses as if in a live scenario.
+- Structured for easy extension to real API integration.
+
+---
+
+## Demo Walkthrough (from demo.ipynb)
+
+- Sample user input requesting urgent hospital help.
+- Agent detects urgency and fetches nearest hospital from dummy DB.
+- Outputs resource details and stores the session log.
+- Displays stored session data showing persistence.
+- Demonstrates key agent AI concepts like session, memory, and modular design.
+
+---
+
+## Future Enhancements
+
+- Upgrade dummy data to live Google API calls when billing is available.
+- Add agent-to-agent communication simulation for task delegation.
+- Implement NLP for better urgency and intent detection.
+- Create frontend interfaces for real-time interaction.
+- Extend to multi-lingual and multi-resource types.
+
+---
+
+## License
+
+MIT License. See LICENSE file.
+
+---
+
+## Contact
+
+For questions or contributions, open an issue or submit a pull request.
+
+---
+
+Thank you for exploring the Community Resource Navigator Agent project!
+
